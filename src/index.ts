@@ -4,8 +4,7 @@ import * as GooglePhotosAlbum from 'google-photos-album-image-url-fetch';
 export default class WorkerB extends WorkerEntrypoint {
 	// Currently, entrypoints without a named handler are not supported
 	async fetch(request: Request) {
-		const url = new URL(request.url);
-		const albumUrl = url.searchParams.get('albumUrl');
+		const albumUrl = request.url;
 
 		if (!albumUrl) {
 			return new Response(
