@@ -4,9 +4,10 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "google-scrape",
+	"name": "cf-google-album-scrape",
 	"main": "src/index.ts",
 	"compatibility_date": "2025-10-24",
+	"compatibility_flags": ["nodejs_compat"],
 	"observability": {
 		"enabled": true
 	}
