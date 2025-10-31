@@ -6,10 +6,20 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "cf-google-album-scrape",
 	"main": "src/index.ts",
-	"compatibility_date": "2025-10-24",
+	"compatibility_date": "2025-10-11",
 	"compatibility_flags": ["nodejs_compat"],
 	"observability": {
-		"enabled": true
+		"logs": {
+			"enabled": true,
+			"head_sampling_rate": 1,
+			"invocation_logs": true,
+			"persist": true
+		},
+		"traces": {
+			"enabled": true,
+			"persist": true,
+			"head_sampling_rate": 1
+		}
 	}
 	/**
 	 * Smart Placement
